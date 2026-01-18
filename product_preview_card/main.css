@@ -1,0 +1,82 @@
+main {
+  background-color: #f3eae3;
+  align-content: center;
+}
+
+.wrapper {
+  width: min(90%, 600px);
+  margin-inline: auto;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  object-fit: cover;
+}
+
+.product-content {
+  background-color: #fff;
+  color: #1a1a1a;
+  padding: 1.7rem;
+
+  .product-type {
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  .product-name {
+    font-size: 1.5rem;
+    margin-block: 0.7rem;
+  }
+
+  .product-details {
+    line-height: 1.5em;
+    margin-bottom: 1rem;
+  }
+
+  .perfume-price {
+    margin-bottom: 1rem;
+
+    p {
+      color: #3c7763;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    span {
+      font-weight: 400;
+      color: rgb(68, 68, 68);
+      font-size: 1rem;
+      text-decoration: line-through;
+    }
+  }
+
+  .purchase-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-block: 1rem;
+    gap: 1rem;
+    background-color: #3d8168;
+    border: none;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: #3d816898;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (width >= 576px) {
+  .product-card {
+    flex-direction: row;
+  }
+}
