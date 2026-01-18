@@ -1,0 +1,92 @@
+main {
+  align-content: center;
+  background-color: #d6e1ff;
+}
+
+.wrapper {
+  width: min(90%, 400px);
+  margin-inline: auto;
+}
+
+.order-summary-card {
+  border-radius: 19px;
+  background-color: azure;
+  box-shadow: 2px 3px 7px #1a1a1a;
+  color: #1a1a1a;
+
+  .hero-avatar {
+    border-radius: 19px;
+  }
+
+  .order-title {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-block: 1rem;
+  }
+
+  .order-details {
+    width: 75%;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .order-plan {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-block: 2rem;
+
+    p {
+      font-weight: bold;
+    }
+
+    span {
+      font-weight: 300;
+    }
+
+    > :last-child {
+      margin-left: 1.5rem;
+      background: none;
+      border: none;
+      color: blue;
+      text-decoration: underline;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .order-payment-btn {
+    display: block;
+    margin-inline: auto;
+    padding-block: 0.7rem;
+    width: 80%;
+    border-radius: 17px;
+    background-color: #382ae1;
+    border: none;
+    box-shadow: 0 7px 11px #3333336e;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #392ae17b;
+    }
+  }
+
+  .order-cancel-btn {
+    display: block;
+    margin-inline: auto;
+    width: 80%;
+    color: #858caa;
+    padding-block: 1.2rem;
+    border: none;
+    background: none;
+    font-weight: 800;
+
+    &:hover {
+      cursor: pointer;
+      color: #1a1a1a;
+    }
+  }
+}
