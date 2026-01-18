@@ -1,0 +1,46 @@
+main {
+  align-content: center;
+}
+
+.social-links-wrapper {
+  width: min(95%, 23rem);
+  margin-inline: auto;
+}
+
+.social-links {
+  padding: 0.9rem;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7rem;
+
+  .avatar {
+    border-radius: 50%;
+  }
+
+  .gal-location {
+    color: #d5eb86;
+    font-weight: 500;
+  }
+
+  .gal-quote {
+    margin-block: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .socials {
+    width: 85%;
+    border: none;
+    background-color: #333;
+    border-radius: 11px;
+    padding-block: 0.7rem;
+
+    &:hover {
+      background-color: #d5eb86;
+      color: #1f1f1f;
+      cursor: pointer;
+    }
+  }
+}
