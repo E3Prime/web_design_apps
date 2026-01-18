@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("assets/fonts/Roboto-Regular.woff2") format("woff2");
+}
+
+main {
+  font-family: "Roboto", Arial;
+  align-content: center;
+  background-color: #f5d04e;
+}
+
+.blog-card-wrapper {
+  width: min(95%, 360px);
+  margin-inline: auto;
+  box-shadow: 7px 6px 1px black;
+  border-radius: 11px;
+}
+
+.blog-card {
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid rgb(18, 18, 18);
+  border-radius: 11px;
+}
+
+.blog-img {
+  border-radius: 11px;
+}
+
+.blog-topic {
+  background-color: #f5d04e;
+  padding: 0.3rem 0.9rem;
+  border-radius: 11px;
+  font-weight: 600;
+  margin-block: 1rem;
+  max-width: fit-content;
+}
+
+.blog-date {
+  margin-bottom: 0.5rem;
+}
+
+.blog-heading {
+  font-weight: bolder;
+
+  &:hover {
+    color: #f5d04e;
+    cursor: pointer;
+  }
+}
+
+.blog-content {
+  margin-block: 1rem;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  img {
+    width: 45px;
+    aspect-ratio: 1;
+  }
+
+  p {
+    font-weight: 600;
+  }
+}

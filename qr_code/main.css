@@ -1,0 +1,26 @@
+main {
+  align-content: center;
+}
+
+.qr-code-wrapper {
+  width: min(90%, 300px);
+  margin-inline: auto;
+  background-color: azure;
+  padding: 1rem;
+  border-radius: 11px;
+
+  img {
+    border-radius: 11px;
+    border: 2px solid rgb(51, 0, 255);
+  }
+
+  h3 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  p {
+    margin-block: 1rem;
+    text-align: center;
+  }
+}
