@@ -1,0 +1,151 @@
+body {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+header {
+  padding: 1rem;
+  width: min(95%, 43.75rem);
+  margin-inline: auto;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-pc {
+      display: none;
+    }
+
+    .logo {
+      border-radius: 100%;
+      background-color: #1a1a1a;
+    }
+
+    a {
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 600;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  .maple-syrup-photo {
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.about-layout {
+  background-color: #231f20;
+  color: #fff;
+  padding: 3rem 1rem;
+
+  p {
+    margin-inline: auto;
+  }
+}
+
+.card-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 1.5rem;
+
+  .card {
+    max-width: 200px;
+  }
+
+  .card-img {
+    position: relative;
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+      color: azure;
+    }
+  }
+}
+
+footer {
+  padding-block: 1.5rem;
+  background-color: #231f20;
+  color: #fff;
+}
+
+.f-layout {
+  margin-inline: auto;
+  max-width: fit-content;
+  .related-links {
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      margin-inline: 0.5rem;
+    }
+  }
+
+  .contact-info {
+    margin-block: 1rem;
+    text-align: center;
+  }
+
+  .address-info {
+    text-align: center;
+  }
+}
+
+@media (width >= 576px) {
+  .nav-mobile {
+    display: none;
+  }
+
+  header {
+    nav {
+      .nav-pc {
+        display: block;
+      }
+    }
+  }
+
+  .about-layout {
+    p {
+      font-size: 1.5rem;
+      width: 80%;
+    }
+  }
+
+  .card-layout {
+    flex-direction: row;
+  }
+
+  .f-layout {
+    max-width: 43.75rem;
+    display: flex;
+    align-items: center;
+
+    .related-links {
+      margin-right: auto;
+    }
+
+    .contact-info {
+      text-align: start;
+    }
+
+    .address-info {
+      text-align: start;
+      margin-left: 2rem;
+    }
+  }
+}
