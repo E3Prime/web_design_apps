@@ -1,0 +1,94 @@
+header {
+  height: 33dvh;
+  background-image: url(images/background-pattern.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+main {
+  height: 67dvh;
+  background-color: #f9eeff;
+  color: #1a1a1a;
+}
+
+.wrapper {
+  position: absolute;
+  inset: 0;
+  align-content: center;
+  width: min(95%, 36rem);
+  margin-inline: auto;
+}
+
+.faq-layout {
+  background-color: azure;
+  padding: 1rem;
+  border-radius: 9px;
+
+  .faq-title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.accordion {
+  margin-top: 1rem;
+
+  .accordion-item:not(:last-child) {
+    border-bottom: 1px solid gray;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .accordion-toggle {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .accordion-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 0.7rem;
+
+    &:hover {
+      .accordion-title {
+        color: rgb(96, 3, 255);
+      }
+    }
+
+    .accordion-title {
+      width: 75%;
+      font-weight: 600;
+    }
+
+    img {
+      pointer-events: none;
+    }
+
+    .minus-icon {
+      display: none;
+    }
+  }
+
+  .accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    interpolate-size: allow-keywords;
+  }
+
+  .accordion-toggle:checked ~ .accordion-content {
+    height: auto;
+  }
+
+  .accordion-toggle:checked ~ .accordion-control .plus-icon {
+    display: none;
+  }
+  .accordion-toggle:checked ~ .accordion-control .minus-icon {
+    display: block;
+  }
+}

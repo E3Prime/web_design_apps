@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Accordion</title>
+    <link rel="stylesheet" href="resetutil.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="wrapper">
+        <div class="faq-layout">
+          <div class="faq-title">
+            <h1>FAQs</h1>
+            <img src="images/icon-star.svg" alt="" width="30" height="30" />
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <input type="checkbox" id="toggleQ1" class="accordion-toggle" aria-controls="Q1Content" />
+              <label for="toggleQ1" class="accordion-control">
+                <p class="accordion-title">What is the difference between Java and JavaScript?</p>
+                <div class="icons">
+                  <img class="plus-icon" src="images/icon-plus.svg" alt="plus icon" />
+                  <img class="minus-icon" src="images/icon-minus.svg" alt="minus icon" />
+                </div>
+              </label>
+
+              <div id="Q1Content" class="accordion-content">
+                <p>
+                  Despite the similar names, they are entirely different languages. Java is a compiled language used for large-scale enterprise apps and Android, while JavaScript is an
+                  interpreted language primarily used to make websites interactive.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <input type="checkbox" id="toggleQ2" class="accordion-toggle" aria-controls="Q2Content" />
+              <label for="toggleQ2" class="accordion-control">
+                <p class="accordion-title">Which language should a beginner learn first?</p>
+                <div class="icons">
+                  <img class="plus-icon" src="images/icon-plus.svg" alt="plus icon" />
+                  <img class="minus-icon" src="images/icon-minus.svg" alt="minus icon" />
+                </div>
+              </label>
+
+              <div id="Q2Content" class="accordion-content">
+                <p>
+                  Python is widely recommended for beginners due to its readable, English-like syntax. However, if your goal is web development, starting with HTML, CSS, and JavaScript is
+                  the best path.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <input type="checkbox" id="toggleQ3" class="accordion-toggle" aria-controls="Q3Content" />
+              <label for="toggleQ3" class="accordion-control">
+                <p class="accordion-title">What is a "Framework" versus a "Library"?</p>
+                <div class="icons">
+                  <img class="plus-icon" src="images/icon-plus.svg" alt="plus icon" />
+                  <img class="minus-icon" src="images/icon-minus.svg" alt="minus icon" />
+                </div>
+              </label>
+
+              <div id="Q3Content" class="accordion-content">
+                <p>
+                  The technical difference lies in "inversion of control." You call a Library to perform a specific task (you are in charge). A Framework calls your code and provides a
+                  blueprint for how the whole app should be built (the framework is in charge).
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <input type="checkbox" id="toggleQ4" class="accordion-toggle" aria-controls="Q4Content" />
+              <label for="toggleQ4" class="accordion-control">
+                <p class="accordion-title">Is CSS actually a programming language?</p>
+                <div class="icons">
+                  <img class="plus-icon" src="images/icon-plus.svg" alt="plus icon" />
+                  <img class="minus-icon" src="images/icon-minus.svg" alt="minus icon" />
+                </div>
+              </label>
+
+              <div id="Q4Content" class="accordion-content">
+                <p>
+                  CSS is a Style Sheet Language. However, with the introduction of variables, math functions, and logic, many argue that it has evolved into a specialized programming tool
+                  for the visual layer of the web.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
