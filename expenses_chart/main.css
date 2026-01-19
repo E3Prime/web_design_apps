@@ -1,0 +1,130 @@
+:root {
+  --primary-color: hsl(10 79% 65%);
+  --secondary-color: hsl(186 34% 65%);
+  --neutral-brown-950: hsl(25, 47%, 15%);
+  --neutral-brown-400: hsl(28 10% 53%);
+  --neutral-red-100: hsl(26 66% 93%);
+}
+
+main {
+  align-content: center;
+  background-color: var(--neutral-red-100);
+}
+
+.wrapper {
+  margin-inline: auto;
+  inline-size: min(95%, 35rem);
+}
+
+.chart-balance {
+  background-color: var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  span {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 0.3rem;
+  }
+}
+
+.chart {
+  background-color: #fffcf7;
+  padding: 1rem;
+
+  h3 {
+    color: var(--neutral-brown-950);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .pillars {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    height: 15.625rem;
+
+    .pillar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+
+      .bar {
+        width: 2.1rem;
+        background-color: var(--primary-color);
+        border-radius: 10px;
+
+        &:hover {
+          background-color: var(--secondary-color);
+        }
+      }
+
+      span {
+        margin-top: 0.3rem;
+        text-align: center;
+        color: var(--neutral-brown-400);
+      }
+
+      .bar-mon {
+        height: 17.45%;
+      }
+
+      .bar-tue {
+        height: 34.91%;
+      }
+
+      .bar-wed {
+        height: 52.36%;
+      }
+
+      .bar-thu {
+        height: 31.07%;
+      }
+
+      .bar-fri {
+        height: 23.39%;
+      }
+
+      .bar-sat {
+        height: 43.28%;
+      }
+
+      .bar-sun {
+        height: 25.48%;
+      }
+    }
+  }
+
+  hr {
+    margin-block: 1rem;
+    color: var(--neutral-red-100);
+  }
+
+  .chart-results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: var(--neutral-brown-950);
+      font-weight: 700;
+    }
+
+    span {
+      color: var(--neutral-brown-400);
+      font-weight: 700;
+    }
+
+    .monthly-total {
+      font-size: 2rem;
+    }
+
+    .percentage {
+      text-align: end;
+    }
+  }
+}
