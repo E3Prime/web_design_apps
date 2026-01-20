@@ -1,0 +1,130 @@
+main {
+  background-color: #e0f1e7;
+  align-content: center;
+}
+
+.wrapper {
+  width: min(95%, 600px);
+  margin-inline: auto;
+  margin-block: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(6.25rem, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #1a1a1a;
+
+  h1 {
+    grid-column: span 2;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    border-radius: 10px;
+    border: 1px solid gray;
+
+    &:hover {
+      border: 1px solid rgb(39, 167, 39);
+    }
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 0.4rem;
+  }
+
+  p {
+    visibility: hidden;
+  }
+
+  p.error {
+    visibility: visible;
+    color: red;
+  }
+
+  .email {
+    grid-column: span 2;
+  }
+
+  .query-type {
+    grid-column: span 2;
+  }
+
+  .queries {
+    display: flex;
+    gap: 1rem;
+    > * {
+      flex: 1;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.4rem;
+      border: 2px solid silver;
+      border-radius: 10px;
+    }
+  }
+
+  .message {
+    grid-column: span 2;
+  }
+
+  textarea {
+    width: 100%;
+    resize: none;
+  }
+
+  .confirmation {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .submit-btn {
+    grid-column: span 2;
+    padding-block: 0.5rem;
+    background-color: #0c7d69;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+  }
+}
+
+@media (width < 512px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .queries {
+      flex-direction: column;
+    }
+  }
+}
+
+.success-msg {
+  transition: allow-discrete opacity 1s ease-in;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 300px;
+  margin-top: 0.5rem;
+  background-color: #1a1a1a92;
+  border-radius: 10px;
+  color: azure;
+  padding: 1rem;
+  text-align: center;
+}

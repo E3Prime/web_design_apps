@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact form</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="resetutil.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <form class="wrapper" id="contactForm">
+        <h1>Contact Us</h1>
+        <div class="first-name">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" maxlength="30" required />
+        </div>
+
+        <div class="last-name">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" maxlength="30" required />
+        </div>
+
+        <div class="email">
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" name="email" maxlength="90" required />
+          <p>Email is invalid!</p>
+        </div>
+
+        <div class="query-type">
+          <label>Query Type *</label>
+          <p class="query-error">You must choose one of the queries</p>
+          <div class="queries">
+            <div class="general-enquiry">
+              <label for="generalEnquiry">General Enquiry</label>
+              <input type="radio" id="generalEnquiry" name="query" />
+            </div>
+
+            <div class="support-request">
+              <label for="supportRequest">Support Request</label>
+              <input type="radio" id="supportRequest" name="query" />
+            </div>
+          </div>
+        </div>
+
+        <div class="message">
+          <label for="contactMessage">Message *</label>
+          <textarea name="contactMessage" id="contactMessage" rows="7"></textarea>
+          <p class="contact-error-msg">You must provide a message!</p>
+        </div>
+
+        <div class="confirmation">
+          <label for="confirmationCheck">I consent to being contacted by the team *</label>
+          <input type="checkbox" name="confirmationCheck" id="confirmationCheck" />
+        </div>
+        <p class="confirmation-error-msg">You must agree to the terms</p>
+
+        <button class="submit-btn">Submit</button>
+      </form>
+      <div class="success-msg fade-out" id="successMsg">
+        <p>Message Sent! <br />Thank you for completing the form we will be in touch soon!</p>
+      </div>
+    </main>
+  </body>
+</html>
