@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Time tracking dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="resetutil.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="wrapper">
+        <div class="time-tracking-layout" id="trackingCards">
+          <div class="card-profile">
+            <div class="card-header-profile">
+              <div class="user-title">
+                <img src="images/image-jeremy.png" alt="User" />
+                <p>Report for <br /><span>Jeremy Robertson</span></p>
+              </div>
+            </div>
+            <div class="card-options" id="trackOptions">
+              <button type="button" id="dailyTracking">Daily</button>
+              <button type="button" id="weeklyTracking">Weekly</button>
+              <button type="button" id="monthlyTracking">Monthly</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
