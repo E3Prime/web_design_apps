@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="resetutil.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="wrapper">
+        <div class="product-list-wrapper">
+          <h1>Desserts</h1>
+          <div class="dessert-cards" id="dessertCards"></div>
+        </div>
+
+        <div class="cart-product-wrapper">
+          <div class="cart-product-layout">
+            <h2>Your cart (0)</h2>
+            <div class="empty-cart" id="emptyCart">
+              <img src="images/illustration-empty-cart.svg" alt="Empty cart illustration" />
+              <p>Your added items will appear here</p>
+            </div>
+            <div class="checkout-cart" id="checkoutCart" hidden>
+              <div id="checkoutItems"></div>
+              <div class="checkout">
+                <div class="checkout-total">
+                  <p>Order Total</p>
+                  <h4 id="totalPrice">$46.50</h4>
+                </div>
+                <div class="checkout-msg">
+                  <img src="images/icon-carbon-neutral.svg" alt="carbon neutral" />
+                  <p>This is a <span>carbon-neutral</span> delivery</p>
+                </div>
+                <button type="button" class="checkout-btn" id="checkoutBtn">Confirm Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-confirmation" id="orderConfirmation" hidden>
+          <div class="order-layout">
+            <img src="images/icon-order-confirmed.svg" alt="checkmark" />
+            <h1>Order Confirmed</h1>
+            <p>We hope you enjoy your food!</p>
+            <div class="order-summary" id="orderSummary"></div>
+            <button type="button" id="newOrder">Start New Order</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
