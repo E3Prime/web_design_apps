@@ -28,6 +28,8 @@ const totalPrice = /** @type {HTMLElement} */ (checkoutCart.querySelector('#tota
 const checkoutBtn = /** @type {HTMLButtonElement} */ (document.getElementById('checkoutBtn'));
 const orderConfirmation = /** @type {HTMLElement} */ (document.getElementById('orderConfirmation'));
 const orderSummary = /** @type {HTMLElement} */ (document.getElementById('orderSummary'));
+const cartCount = /** @type {HTMLElement} */ (document.getElementById('cartCount'));
+const newOrderBtn = /** @type {HTMLButtonElement} */ (document.getElementById('newOrder'));
 
 /** @type {DessertItem[]} */
 const desserts = [];
@@ -84,9 +86,23 @@ checkoutItems.addEventListener('click', (e) => {
   updateCartUI();
 });
 
-checkoutBtn.addEventListener('click', () => {});
+checkoutBtn.addEventListener('click', async () => {
+  checkoutCart.setAttribute('hidden', '');
+  await renderOrderSummary();
+  orderConfirmation.removeAttribute('hidden');
+});
+
+newOrderBtn.addEventListener('click', () => {
+  cart.length = 0;
+  dessertCards.innerHTML = '';
+  orderSummary.innerHTML = '';
+  updateCartUI();
+  orderConfirmation.setAttribute('hidden', '');
+  renderDesserts();
+});
 
 function updateCartUI() {
+  cartCount.textContent = `Your cart (${cart.length.toString()})`;
   if (cart.length === 0) {
     emptyCart.removeAttribute('hidden');
     checkoutCart.setAttribute('hidden', '');
@@ -188,20 +204,41 @@ async function renderDesserts() {
   dessertCards.innerHTML = htmlContent;
 }
 
-function renderOrderSummary() {
-  let htmlContent = `
-  <div class="order-item">
-    <div class="order-banner">
-      <img src="images/image-baklava-thumbnail.jpg" width="50" height="50" alt="" />
-      <div>
-        <p>Classic Tiramisu</p>
-        <span>1x @ $6.50</span>
-      </div>
-    </div>
+async function renderOrderSummary() {
+  let htmlContent = '';
+  let totalPrice = cart
+    .map((c) => c.product.price * c.quantity)
+    .reduce((acc, curr) => acc + curr, 0)
+    .toFixed(2);
 
-    <span>$5.50</span>
-  </div>
+  for (let i = 0; i < cart.length; ++i) {
+    const productItem = cart[i];
+
+    htmlContent += `
+    <div class="order-item">
+      <div class="order-banner">
+        <img src="${productItem.product.image.thumbnail}" width="50" height="50" alt="Thumbnail of ${productItem.product.name}" />
+        <div>
+          <p>Classic Tiramisu</p>
+          <span>${productItem.quantity}x @ $${productItem.product.price.toFixed(2)}</span>
+        </div>
+      </div>
+  
+      <span>$${(productItem.product.price * productItem.quantity).toFixed(2)}</span>
+    </div>
+    `;
+  }
+
+  let orderTotalHtml = `
+    <div class="order-price">
+      <p>Order total</p>
+      <p>$${totalPrice}</p>
+    </div>
   `;
+
+  htmlContent += orderTotalHtml;
+
+  orderSummary.innerHTML = htmlContent;
 }
 
 async function fetchDessertData() {
