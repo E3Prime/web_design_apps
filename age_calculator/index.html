@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="resetutil.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="script,.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="wrapper">
+        <div class="layout">
+          <div class="date-inputs" id="dateInputs">
+            <div class="date" data-state="idle">
+              <label for="day">Day</label>
+              <input
+                placeholder="DD"
+                type="number"
+                name="day"
+                id="day"
+                step="1"
+                min="1"
+                max="31"
+                maxlength="2"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+              <p>This field is required</p>
+            </div>
+
+            <div class="date" data-state="idle">
+              <label for="month">Month</label>
+              <input
+                placeholder="MM"
+                type="number"
+                name="month"
+                id="month"
+                step="1"
+                min="1"
+                max="12"
+                maxlength="2"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+              <p>This field is required</p>
+            </div>
+
+            <div class="date" data-state="idle">
+              <label for="year">Year</label>
+              <input
+                placeholder="YYYY"
+                type="number"
+                name="year"
+                id="year"
+                step="1"
+                min="1"
+                max="9999"
+                maxlength="4"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+              <p>This field is required</p>
+            </div>
+          </div>
+          <div class="calculate-date">
+            <hr />
+            <button type="button"><img src="images/icon-arrow.svg" alt="Icon arrow" /></button>
+          </div>
+          <div class="date-results">
+            <p>--years</p>
+            <p>--months</p>
+            <p>--days</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
