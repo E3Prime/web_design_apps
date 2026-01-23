@@ -72,6 +72,13 @@ main {
     }
   }
 
+  .future-date-error-msg {
+    margin-top: 0.7rem;
+    color: crimson;
+    text-align: center;
+    visibility: hidden;
+  }
+
   .calculate-date {
     margin-block: 2rem;
     position: relative;
@@ -88,6 +95,7 @@ main {
       border: none;
 
       img {
+        pointer-events: none;
         max-width: 30px;
       }
     }
