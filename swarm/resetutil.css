@@ -1,5 +1,4 @@
 /* ANCHOR Resets */
-
 *,
 *::before,
 *::after {
@@ -68,8 +67,4 @@ figcaption {
 
 .fade-out {
   opacity: 0;
-}
-
-[hidden] {
-  display: none !important;
 }

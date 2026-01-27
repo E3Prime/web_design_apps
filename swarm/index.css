@@ -1,0 +1,82 @@
+main {
+  background-image: url(images/background-img.png);
+  background-size: cover;
+}
+
+.game-wrapper {
+  container-type: inline-size;
+  color: azure;
+  height: 100%;
+  align-content: center;
+  width: min(100%, 49rem);
+  padding-inline: 0.7rem;
+  margin-inline: auto;
+
+  .game-title {
+    text-align: center;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 11px crimson;
+  }
+
+  .game-time {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 9px crimson;
+    margin-inline: auto;
+  }
+
+  .hunter-warning-msg {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 1px 1px 11px crimson;
+  }
+}
+
+.location-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(6.25rem, 1fr));
+  gap: 1rem;
+  margin-block: 1rem;
+
+  .location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26 26 26 / 0.4);
+    backdrop-filter: blur(9px);
+    border: 1px solid gold;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(255, 217, 0, 0.601);
+    position: relative;
+
+    .location-icon {
+      font-size: 3rem;
+    }
+
+    .location-name {
+      text-align: center;
+      font-size: 1.3rem;
+    }
+
+    .location-people {
+      font-size: 1.7rem;
+      text-align: center;
+    }
+
+    > :last-child {
+      position: absolute;
+      inset: 0;
+      border: none;
+      background: none;
+    }
+  }
+}
+
+@container (width >= 576px) {
+  .location-list {
+    grid-template-columns: repeat(3, minmax(6.25rem, 1fr));
+  }
+}
